@@ -7,8 +7,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 " Git flag on nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" Syntax checking hacks for vim
-Plug 'kballard/vim-swift'
+" Plug 'kballard/vim-swift'
+Plug 'bumaociyuan/vim-swift'
 " Fuzzy file, buffer, mru, tag, etc finder
 Plug 'kien/ctrlp.vim'
 " precision colorscheme for the vim text editor
@@ -27,6 +27,10 @@ Plug 'mileszs/ack.vim'
 Plug 'rking/ag.vim'
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
+" The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
+Plug 'SirVer/ultisnips'
+" vim-snipmate default snippets (Previously snipmate-snippets)
+Plug 'honza/vim-snippets'
 call plug#end()
 
 " CONFIGURATION
@@ -70,6 +74,9 @@ set guioptions-=r
 " split line
 hi VertSplit term=reverse cterm=reverse gui=none guibg=#002b36 guifg=#859900
 
+" font
+set guifont=SF\ Mono\ Regular:h14
+
 " KEY MAP
 
 " scrooloose/nerdtree
@@ -88,6 +95,11 @@ map <D-F> :Ack<Space>
 " rking/ag.vim
 "" https://github.com/rking/ag.vim
 map <D-A> :Ag<Space>
+
+" SirVer/ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Alt + * move line
 "" http://vim.wikia.com/wiki/Moving_lines_up_or_down
