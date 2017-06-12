@@ -24,13 +24,16 @@ Plug 'easymotion/vim-easymotion'
 " Vim plugin for the Perl module / CLI script 'ack'
 Plug 'mileszs/ack.vim'
 " Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
-Plug 'rking/ag.vim'
-" True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
 " The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
 Plug 'SirVer/ultisnips'
 " vim-snipmate default snippets (Previously snipmate-snippets)
 Plug 'honza/vim-snippets'
+" Vim Cucumber runtime files
+Plug 'tpope/vim-cucumber'
+" Automated tag file generation and syntax highlighting of tags in Vim
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
 call plug#end()
 
 " CONFIGURATION
@@ -78,23 +81,13 @@ hi VertSplit term=reverse cterm=reverse gui=none guibg=#002b36 guifg=#859900
 set guifont=SF\ Mono\ Regular:h14
 
 " KEY MAP
-
-" scrooloose/nerdtree
-"" https://github.com/scrooloose/nerdtree
-map <D-F1> :NERDTreeToggle<CR>
-imap <D-F1> <Esc>:NERDTreeToggle<CR>
-
 " kien/ctrlp.vim
-"" https://github.com/kien/ctrlp.vim
-let g:ctrlp_map = '<D-O>'
+"" Recent file
+map <Leader>e :CtrlPBuffer<Enter>
 
 " mileszs/ack.vim
 "" https://github.com/mileszs/ack.vim
-map <D-F> :Ack<Space>
-
-" rking/ag.vim
-"" https://github.com/rking/ag.vim
-map <D-A> :Ag<Space>
+map <Leader>f :Ack<Space>
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -111,8 +104,13 @@ vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
 
 " move between different window 
-map <D-J> <C-W>j
-map <D-K> <C-W>k
-map <D-H> <C-W>h
-map <D-L> <C-W>l
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
+" quit
+nmap <Leader>w :wq<Enter>
+nmap <Leader>q :q!<Enter>
+imap <Leader>w <Esc>:wq<Enter>
+imap <Leader>q <Esc>:q!<Enter>

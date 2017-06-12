@@ -30,22 +30,22 @@ rm -rf ~/Desktop/vim
 
 |Action|Key|Mode|
 |---|---|---|
-|Show/Hide Project Files|⌘ + F1|Normal/Insert|
-|Open Quickly|⌘ + ⇧ + O|Normal|
+|Show/Hide Project Files|^ + n|Normal/Insert|
+|Open Quickly|^ + p|Normal|
+|Open Recent Quickly|\\e|Normal|
 
 #### Search
 
 |Action|Key|Mode|
 |---|---|---|
-|Search In Project By Ack|⌘ + ⇧ + F|Normal|
-|Search In Project By Ag|⌘ + ⇧ + A|Normal|
+|Search In Project By Ack|\f|Normal|
 
 #### Move
 
 |Action|Key|Mode|
 |---|---|---|
-|Move A Line UP|⌥ + J|Normal/Insert/Visual|
-|Move A Line Down|⌥ + K|Normal/Insert/Visual|
+|Move A Line UP|⌥ + j|Normal/Insert/Visual|
+|Move A Line Down|⌥ + k|Normal/Insert/Visual|
 |Easy Moving|\\\\s|Normal|
 
 #### Code
@@ -58,10 +58,19 @@ rm -rf ~/Desktop/vim
 
 |Action|Key|Mode|
 |---|---|---|
-|Jump To Up Window|⌘ + ⇧ + J|Normal|
-|Jump To Down Window|⌘ + ⇧ + K|Normal|
-|Jump To Left Window|⌘ + ⇧ + H|Normal|
-|Jump To Right Window|⌘ + ⇧ + L|Normal|
+|Jump To Up Window|^ + j|Normal|
+|Jump To Down Window|^ + k|Normal|
+|Jump To Left Window|^ + h|Normal|
+|Jump To Right Window|^ + l|Normal|
+|Save and Quit|\w|Normal/Insert|
+|Quit|\q|Normal/Insert|
+
+#### Cucumber
+
+|Action|Key|Mode|
+|---|---|---|
+|Jump to steps define|^ + wd|Normal|
+
 
 ### Reference
 
