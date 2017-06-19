@@ -34,13 +34,15 @@ Plug 'tpope/vim-cucumber'
 " Automated tag file generation and syntax highlighting of tags in Vim
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
+" Vim plug for switching between companion source files (e.g. ".h" and ".cpp")
+Plug 'derekwyatt/vim-fswitch'
 call plug#end()
 
 " CONFIGURATION
 
 " scrooloose/nerdtree
 "" open a NERDTree automatically when vim starts up
-autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree | wincmd p
 "" close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " close vim if the only window left open is a NERDTree
 "" open a NERDTree automatically when vim starts up if no files were specified
@@ -70,6 +72,9 @@ set shiftwidth=2
 " number
 set nu
 
+" Auto reload file when file changed
+:set autoread
+
 " hide scroll
 set guioptions-=L
 set guioptions-=r
@@ -94,6 +99,17 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" derekwyatt/vim-fswitch
+nmap <silent> <Leader>of :FSHere<cr>
+nmap <silent> <Leader>ol :FSRight<cr>
+nmap <silent> <Leader>oL :FSSplitRight<cr>
+nmap <silent> <Leader>oh :FSLeft<cr>
+nmap <silent> <Leader>oH :FSSplitLeft<cr>
+nmap <silent> <Leader>ok :FSAbove<cr>
+nmap <silent> <Leader>oK :FSSplitAbove<cr>
+nmap <silent> <Leader>oj :FSBelow<cr>
+nmap <silent> <Leader>oJ :FSSplitBelow<cr>
+
 " Alt + * move line
 "" http://vim.wikia.com/wiki/Moving_lines_up_or_down
 nnoremap ∆ :m .+1<CR>==
@@ -114,3 +130,7 @@ nmap <Leader>w :wq<Enter>
 nmap <Leader>q :q!<Enter>
 imap <Leader>w <Esc>:wq<Enter>
 imap <Leader>q <Esc>:q!<Enter>
+
+" resize window
+map <Leader>< :vertical resize -5<Enter>
+map <Leader>> :vertical resize +5<Enter>

@@ -33,12 +33,22 @@ rm -rf ~/Desktop/vim
 |Show/Hide Project Files|^ + n|Normal/Insert|
 |Open Quickly|^ + p|Normal|
 |Open Recent Quickly|\\e|Normal|
+|Swich .h/.m|\\of|Normal|
+|Swich .h/.m into a right window|\\ol|Normal|
+|Swich .h/.m into a right new window|\\oL|Normal|
+|Swich .h/.m into a left window|\\oh|Normal|
+|Swich .h/.m into a left new window|\\oH|Normal|
+
+|Swich .h/.m into a top window|\\ok|Normal|
+|Swich .h/.m into a top new window|\\oK|Normal|
+|Swich .h/.m into a bottom window|\\oj|Normal|
+|Swich .h/.m into a bottom new window|\\oJ|Normal|
 
 #### Search
 
 |Action|Key|Mode|
 |---|---|---|
-|Search In Project By Ack|\f|Normal|
+|Search In Project By Ack|\\f|Normal|
 
 #### Move
 
@@ -62,8 +72,10 @@ rm -rf ~/Desktop/vim
 |Jump To Down Window|^ + k|Normal|
 |Jump To Left Window|^ + h|Normal|
 |Jump To Right Window|^ + l|Normal|
-|Save and Quit|\w|Normal/Insert|
-|Quit|\q|Normal/Insert|
+|Save and Quit|\\w|Normal/Insert|
+|Quit|\\q|Normal/Insert|
+|Increase vertical|\\>|Normal/Insert|
+|Decrease vertical|\\<|Normal/Insert|
 
 #### Cucumber
 
