@@ -92,7 +92,9 @@ map <Leader>e :CtrlPBuffer<Enter>
 
 " mileszs/ack.vim
 "" https://github.com/mileszs/ack.vim
-map <Leader>f :Ack<Space>
+map <Leader>f :Ack!<Space>
+map <Leader>fo :Ack! --objc<Space>
+map <Leader>fs :Ack! --swift<Space>
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -132,5 +134,5 @@ imap <Leader>w <Esc>:wq<Enter>
 imap <Leader>q <Esc>:q!<Enter>
 
 " resize window
-map <Leader>< :vertical resize -5<Enter>
-map <Leader>> :vertical resize +5<Enter>
+map <Leader>< :vertical resize -10<Enter>
+map <Leader>> :vertical resize +10<Enter>
