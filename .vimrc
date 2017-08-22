@@ -95,6 +95,7 @@ map <Leader>e :CtrlPBuffer<Enter>
 map <Leader>f :Ack!<Space>
 map <Leader>fo :Ack! --objc<Space>
 map <Leader>fs :Ack! --swift<Space>
+map <Leader>fp :Ack! --python<Space>
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
