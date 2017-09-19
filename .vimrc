@@ -36,6 +36,8 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 " Vim plug for switching between companion source files (e.g. ".h" and ".cpp")
 Plug 'derekwyatt/vim-fswitch'
+" Emmet-vim is a vim plug-in which provides support for expanding abbreviations similar to emmet.
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " CONFIGURATION
@@ -86,6 +88,13 @@ hi VertSplit term=reverse cterm=reverse gui=none guibg=#002b36 guifg=#859900
 set guifont=SF\ Mono\ Regular:h14
 
 " KEY MAP
+" tree
+"" toggle tree
+map <Leader>n :NERDTreeToggle<Enter>
+"" locate current file in the tree
+map <Leader>j :NERDTreeFind<Enter>
+inoremap <Leader>j <Esc>:NERDTreeFind<Enter>
+
 " kien/ctrlp.vim
 "" Recent file
 map <Leader>e :CtrlPBuffer<Enter>

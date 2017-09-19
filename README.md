@@ -30,15 +30,15 @@ rm -rf ~/Desktop/vim
 
 |Action|Key|Mode|
 |---|---|---|
-|Show/Hide Project Files|^ + n|Normal/Insert|
+|Show/Hide Project Files|\\n|Normal/Insert|
 |Open Quickly|^ + p|Normal|
 |Open Recent Quickly|\\e|Normal|
+|Find file in Tree|\\j|Normal|
 |Swich .h/.m|\\of|Normal|
 |Swich .h/.m into a right window|\\ol|Normal|
 |Swich .h/.m into a right new window|\\oL|Normal|
 |Swich .h/.m into a left window|\\oh|Normal|
 |Swich .h/.m into a left new window|\\oH|Normal|
-
 |Swich .h/.m into a top window|\\ok|Normal|
 |Swich .h/.m into a top new window|\\oK|Normal|
 |Swich .h/.m into a bottom window|\\oj|Normal|
@@ -63,6 +63,7 @@ rm -rf ~/Desktop/vim
 |Action|Key|Mode|
 |---|---|---|
 |Comment|\\cc|Normal|
+|HTML Emmet|^ + y,|Normal|
 
 #### Window
 
