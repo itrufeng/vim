@@ -85,7 +85,7 @@ set guioptions-=r
 hi VertSplit term=reverse cterm=reverse gui=none guibg=#002b36 guifg=#859900
 
 " font
-set guifont=SF\ Mono\ Regular:h14
+set guifont=Monaco:h14
 
 " KEY MAP
 " tree
