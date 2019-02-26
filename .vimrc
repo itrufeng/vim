@@ -40,7 +40,12 @@ Plug 'derekwyatt/vim-fswitch'
 Plug 'mattn/emmet-vim'
 call plug#end()
 
-" CONFIGURATION
+" altercation/vim-colors-solarized
+"" https://github.com/altercation/vim-colors-solarized
+syntax enable
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 " scrooloose/nerdtree
 "" open a NERDTree automatically when vim starts up
@@ -53,48 +58,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "" open NERDTree automatically when vim starts up on opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
-" altercation/vim-colors-solarized
-"" https://github.com/altercation/vim-colors-solarized
-syntax enable
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
-
-" hightline current line and column
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
-
-" tab spaces
-set tabstop=2
-set expandtab
-set shiftwidth=2
-
-" number
-set nu
-
-" Disable swap
-set noswapfile
-
-" Disable end of line
-:set nofixendofline
-
-" Auto reload file when file changed
-:set autoread
-
-" hide scroll
-set guioptions-=L
-set guioptions-=r
-
-" split line
-hi VertSplit term=reverse cterm=reverse gui=none guibg=#002b36 guifg=#859900
-
-" font
-set guifont=Monaco:h14
-
-" KEY MAP
-" tree
 "" toggle tree
 map <Leader>n :NERDTreeToggle<Enter>
 "" locate current file in the tree
@@ -106,7 +69,6 @@ inoremap <Leader>j <Esc>:NERDTreeFind<Enter>
 map <Leader>e :CtrlPBuffer<Enter>
 
 " mileszs/ack.vim
-"" https://github.com/mileszs/ack.vim
 map <Leader>f :Ack!<Space>
 map <Leader>fo :Ack! --objc <cword>
 map <Leader>fs :Ack! --swift <cword>
@@ -129,7 +91,8 @@ nmap <silent> <Leader>oK :FSSplitAbove<cr>
 nmap <silent> <Leader>oj :FSBelow<cr>
 nmap <silent> <Leader>oJ :FSSplitBelow<cr>
 
-" Alt + * move line
+" Vim
+"" Alt + * move line
 "" http://vim.wikia.com/wiki/Moving_lines_up_or_down
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
@@ -137,20 +100,40 @@ inoremap ∆ <Esc>:m .+1<CR>==gi
 inoremap ˚ <Esc>:m .-2<CR>==gi
 vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
-
-" move between different window 
+"" move between different window 
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
-" quit
+"" quit
 nmap <Leader>w :wq<Enter>
 nmap <Leader>q :q!<Enter>
 imap <Leader>w <Esc>:wq<Enter>
 imap <Leader>q <Esc>:q!<Enter>
-
-" resize window
+"" resize window
 map <Leader>< :vertical resize -10<Enter>
 map <Leader>> :vertical resize +10<Enter>
+"" hightline current line and column
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+"" font
+set guifont=Monaco:h14
+"" tab spaces
+set tabstop=2
+set expandtab
+set shiftwidth=2
+"" number
+set nu
+"" Disable swap
+set noswapfile
+"" Disable end of line
+:set nofixendofline
+"" Auto reload file when file changed
+:set autoread
+"" hide scroll
+set guioptions-=L
+set guioptions-=r
+"" split line
+hi VertSplit term=reverse cterm=reverse gui=none guibg=#002b36 guifg=#859900
 
