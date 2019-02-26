@@ -118,7 +118,11 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 "" font
-set guifont=Monaco:h14
+if has('macunix')
+  set guifont=Monaco:h14
+elseif has('unix')
+  set guifont="Ubuntu Mono" 14
+endif
 "" tab spaces
 set tabstop=2
 set expandtab
