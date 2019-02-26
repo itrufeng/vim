@@ -147,3 +147,4 @@ imap <Leader>q <Esc>:q!<Enter>
 " resize window
 map <Leader>< :vertical resize -10<Enter>
 map <Leader>> :vertical resize +10<Enter>
+
