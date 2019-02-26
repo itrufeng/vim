@@ -102,9 +102,10 @@ map <Leader>e :CtrlPBuffer<Enter>
 " mileszs/ack.vim
 "" https://github.com/mileszs/ack.vim
 map <Leader>f :Ack!<Space>
-map <Leader>fo :Ack! --objc<Space>
-map <Leader>fs :Ack! --swift<Space>
-map <Leader>fp :Ack! --python<Space>
+map <Leader>fo :Ack! --objc <cword>
+map <Leader>fs :Ack! --swift <cword>
+map <Leader>fp :Ack! --python <cword>
+map <Leader>fj :Ack! --java <cword>
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
