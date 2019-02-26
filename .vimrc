@@ -58,6 +58,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "" open NERDTree automatically when vim starts up on opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"" workspace dir
+let g:NERDTreeChDirMode = 2
 "" toggle tree
 map <Leader>n :NERDTreeToggle<Enter>
 "" locate current file in the tree
@@ -69,6 +71,8 @@ inoremap <Leader>j <Esc>:NERDTreeFind<Enter>
 map <Leader>e :CtrlPBuffer<Enter>
 "" The maximum number of files to scan
 let g:ctrlp_max_files = 0
+"" workspace dir
+let g:ctrlp_working_path_mode = 'rw'
 
 " mileszs/ack.vim
 map <Leader>f :Ack!<Space>
