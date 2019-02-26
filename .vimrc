@@ -77,6 +77,9 @@ set nu
 " Disable swap
 set noswapfile
 
+" Disable end of line
+:set nofixendofline
+
 " Auto reload file when file changed
 :set autoread
 
