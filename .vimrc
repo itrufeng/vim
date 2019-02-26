@@ -67,6 +67,8 @@ inoremap <Leader>j <Esc>:NERDTreeFind<Enter>
 " kien/ctrlp.vim
 "" Recent file
 map <Leader>e :CtrlPBuffer<Enter>
+"" The maximum number of files to scan
+let g:ctrlp_max_files = 0
 
 " mileszs/ack.vim
 map <Leader>f :Ack!<Space>
