@@ -74,6 +74,9 @@ set shiftwidth=2
 " number
 set nu
 
+" Disable swap
+set noswapfile
+
 " Auto reload file when file changed
 :set autoread
 
