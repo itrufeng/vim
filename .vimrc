@@ -69,6 +69,8 @@ inoremap <Leader>j <Esc>:NERDTreeFind<Enter>
 " bling/vim-airline
 "" smarter tab line
 let g:airline#extensions#tabline#enabled = 1
+"" configure the formatting of filenames
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " kien/ctrlp.vim
 "" Recent file
