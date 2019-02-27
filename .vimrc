@@ -14,7 +14,7 @@ Plug 'kien/ctrlp.vim'
 " precision colorscheme for the vim text editor
 Plug 'altercation/vim-colors-solarized'
 " lean & mean status/tabline for vim that's light as air
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 " Vim plugin for intensely orgasmic commenting
 Plug 'scrooloose/nerdcommenter'
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
