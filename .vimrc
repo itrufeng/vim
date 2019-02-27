@@ -154,4 +154,8 @@ hi VertSplit term=reverse cterm=reverse gui=none guibg=#002b36 guifg=#859900
 :inoremap <C-v> <ESC>"+pa
 :vnoremap <C-c> "+y
 :vnoremap <C-d> "+d
+"" chagne buffer
+map <Leader>[ :bp<Enter>
+map <Leader>] :bn<Enter>
+
 
