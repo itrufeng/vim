@@ -38,6 +38,8 @@ Plug 'xolox/vim-easytags'
 Plug 'derekwyatt/vim-fswitch'
 " Emmet-vim is a vim plug-in which provides support for expanding abbreviations similar to emmet.
 Plug 'mattn/emmet-vim'
+" Vim plugin that allows you to visually select increasingly larger regions of text using the same key combination.
+Plug 'terryma/vim-expand-region'
 call plug#end()
 
 " altercation/vim-colors-solarized
