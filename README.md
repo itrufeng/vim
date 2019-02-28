@@ -1,10 +1,11 @@
 # Vim
 
-### Install(Only for MacOS)
+### Install(Only for MacOS/Ubuntu)
 
 ```shell
 git clone https://github.com/itrufeng/vim.git ~/.itrufengvim
 ln -s ~/.itrufengvim/.vimrc ~/.vimrc
+vim -c :PlugInstall
 ```
 
 ### Screenshot
