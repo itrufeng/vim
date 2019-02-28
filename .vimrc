@@ -134,6 +134,8 @@ nmap <Leader>q :q!<Enter>
 imap <Leader>w <Esc>:wq<Enter>
 imap <Leader>q <Esc>:q!<Enter>
 "" resize window
+map <Leader>- :resize -10<Enter>
+map <Leader>+ :resize +10<Enter>
 map <Leader>< :vertical resize -10<Enter>
 map <Leader>> :vertical resize +10<Enter>
 "" hightline current line and column
