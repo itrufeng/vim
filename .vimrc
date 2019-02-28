@@ -79,6 +79,8 @@ map <Leader>e :CtrlPBuffer<Enter>
 let g:ctrlp_max_files = 0
 "" workspace dir
 let g:ctrlp_working_path_mode = 'rw'
+"" caching by not deleting the cache files
+let g:ctrlp_clear_cache_on_exit = 0
 
 " mileszs/ack.vim
 map <Leader>f :Ack!<Space>
@@ -168,5 +170,4 @@ hi VertSplit term=reverse cterm=reverse gui=none guibg=#002b36 guifg=#859900
 "" chagne buffer
 map <Leader>[ :bp<Enter>
 map <Leader>] :bn<Enter>
-
 
