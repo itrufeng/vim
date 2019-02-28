@@ -144,7 +144,7 @@ set cursorline cursorcolumn
 if has('macunix')
   set guifont=Monaco:h14
 elseif has('unix')
-  set guifont="Ubuntu Mono" 14
+  set guifont=Monospace\ 14
 endif
 "" tab spaces
 set tabstop=2
