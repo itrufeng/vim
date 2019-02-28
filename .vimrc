@@ -170,4 +170,7 @@ hi VertSplit term=reverse cterm=reverse gui=none guibg=#002b36 guifg=#859900
 "" chagne buffer
 map <Leader>[ :bp<Enter>
 map <Leader>] :bn<Enter>
+"" terminal
+:set termwinsize=10x0
+map <Leader><F11> :below terminal<Enter>
 
