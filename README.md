@@ -2,10 +2,9 @@
 
 ### Install(Only for MacOS)
 
-```
-git clone https://github.com/itrufeng/vim.git ~/Desktop/vim
-sh ~/Desktop/vim/install.sh
-rm -rf ~/Desktop/vim
+```shell
+git clone https://github.com/itrufeng/vim.git ~/.itrufengvim
+ln -s ~/.itrufengvim/.vimrc ~/.vimrc
 ```
 
 ### Screenshot
@@ -14,11 +13,11 @@ rm -rf ~/Desktop/vim
 
 ### Dependents
 
-* [Homebrew](https://brew.sh) (`You must be install by your self`, we will install all of dependents by Homebrew)
-* [MacVim](https://github.com/macvim-dev/macvim) (We will reinstall if you already have and override system version)
-* [Vim8](https://vim.sourceforge.io)  (We will install it same time with MacVim)
-* [Ack](https://github.com/petdance/ack2) (We will auto install it)
-* [Ag](https://github.com/ggreer/the_silver_searcher) (We will auto install it)
+* [MacVim](https://github.com/macvim-dev/macvim)
+* [Vim8](https://vim.sourceforge.io)
+* [Ack](https://github.com/petdance/ack2)
+* [Ag](https://github.com/ggreer/the_silver_searcher)
+* [CTag](http://ctags.sourceforge.net/)
 
 ### What plugin manager we used
 
@@ -32,6 +31,7 @@ rm -rf ~/Desktop/vim
 |---|---|---|
 |Show/Hide Project Files|\\n|Normal/Insert|
 |Open Quickly|^ + p|Normal|
+|Open File Quickly|^ + d|CtrlP|
 |Open Recent Quickly|\\e|Normal|
 |Find file in Tree|\\j|Normal|
 |Swich .h/.m|\\of|Normal|
@@ -49,6 +49,10 @@ rm -rf ~/Desktop/vim
 |Action|Key|Mode|
 |---|---|---|
 |Search In Project By Ack|\\f|Normal|
+|Search Objective-C In Project|\\fo|Normal|
+|Search Swift In Project|\\fs|Normal|
+|Search Python In Project|\\fp|Normal|
+|Search Java In Project|\\fj|Normal|
 
 #### Move
 
@@ -62,6 +66,8 @@ rm -rf ~/Desktop/vim
 
 |Action|Key|Mode|
 |---|---|---|
+|Copy|^ + c|Visual|
+|Paste|^ + v|Insert|
 |Comment|\\cc|Normal|
 |HTML Emmet|^ + y,|Normal|
 
@@ -69,14 +75,20 @@ rm -rf ~/Desktop/vim
 
 |Action|Key|Mode|
 |---|---|---|
+|Window Tab Forward|\\]|Normal|
+|Window Tab Back|\\[|Normal|
 |Jump To Up Window|^ + j|Normal|
 |Jump To Down Window|^ + k|Normal|
 |Jump To Left Window|^ + h|Normal|
 |Jump To Right Window|^ + l|Normal|
 |Save and Quit|\\w|Normal/Insert|
 |Quit|\\q|Normal/Insert|
-|Increase vertical|\\>|Normal/Insert|
-|Decrease vertical|\\<|Normal/Insert|
+|Increase Vertical|\\>|Normal|
+|Decrease Vertical|\\<|Normal|
+|Increase Horizontal|\\+|Normal|
+|Decrease Horizontal|\\-|Normal|
+|Open Terminal|\\F11|Normal|
+|Close Terminal|^ + d|In Terminal|
 
 #### Cucumber
 
