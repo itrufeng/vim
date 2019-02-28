@@ -69,6 +69,8 @@ vim -c :PlugInstall
 |---|---|---|
 |Copy|^ + c|Visual|
 |Paste|^ + v|Insert|
+|Expand Select|+|Normal|
+|Reduce Select|-|Normal|
 |Comment|\\cc|Normal|
 |HTML Emmet|^ + y,|Normal|
 
