@@ -35,6 +35,7 @@ vim -c :PlugInstall
 |Open File Quickly|^ + d|CtrlP|
 |Open File Horizontal|^ + i|CtrlP|
 |Open File Vertical|^ + s|CtrlP|
+|Open File In New Tab|^ + t|CtrlP|
 |Open Recent Quickly|\\e|Normal|
 |Find file in Tree|\\j|Normal|
 |Swich .h/.m|\\of|Normal|
