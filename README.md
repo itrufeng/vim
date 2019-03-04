@@ -33,6 +33,8 @@ vim -c :PlugInstall
 |Show/Hide Project Files|\\n|Normal/Insert|
 |Open Quickly|^ + p|Normal|
 |Open File Quickly|^ + d|CtrlP|
+|Open File Horizontal|^ + i|CtrlP|
+|Open File Vertical|^ + s|CtrlP|
 |Open Recent Quickly|\\e|Normal|
 |Find file in Tree|\\j|Normal|
 |Swich .h/.m|\\of|Normal|

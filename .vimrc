@@ -83,6 +83,11 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_working_path_mode = 'rw'
 "" caching by not deleting the cache files
 let g:ctrlp_clear_cache_on_exit = 0
+"" open file vertical and horizontal
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("h")': ['<c-i>'],
+    \ 'AcceptSelection("v")': ['<c-s>'],
+    \ }
 
 " mileszs/ack.vim
 map <Leader>f :Ack!<Space>
