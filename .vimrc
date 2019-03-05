@@ -40,6 +40,8 @@ Plug 'derekwyatt/vim-fswitch'
 Plug 'mattn/emmet-vim'
 " Vim plugin that allows you to visually select increasingly larger regions of text using the same key combination.
 Plug 'terryma/vim-expand-region'
+" Vim plugin that displays tags in a window, ordered by scope.
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 " altercation/vim-colors-solarized
@@ -111,6 +113,9 @@ nmap <silent> <Leader>ok :FSAbove<cr>
 nmap <silent> <Leader>oK :FSSplitAbove<cr>
 nmap <silent> <Leader>oj :FSBelow<cr>
 nmap <silent> <Leader>oJ :FSSplitBelow<cr>
+
+" majutsushi/tagbar
+nmap <Leader><F12> :TagbarOpenAutoClose<Enter>
 
 " Vim
 "" Alt + * move line
