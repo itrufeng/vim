@@ -9,8 +9,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'kballard/vim-swift'
 Plug 'bumaociyuan/vim-swift'
-" Fuzzy file, buffer, mru, tag, etc finder
-Plug 'kien/ctrlp.vim'
 " precision colorscheme for the vim text editor
 Plug 'altercation/vim-colors-solarized'
 " lean & mean status/tabline for vim that's light as air
@@ -21,8 +19,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
 " Vim motions on speed
 Plug 'easymotion/vim-easymotion'
-" Vim plugin for the Perl module / CLI script 'ack'
-Plug 'mileszs/ack.vim'
 " Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
 Plug 'terryma/vim-multiple-cursors'
 " The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
@@ -42,6 +38,9 @@ Plug 'mattn/emmet-vim'
 Plug 'terryma/vim-expand-region'
 " Vim plugin that displays tags in a window, ordered by scope.
 Plug 'majutsushi/tagbar'
+" :cherry_blossom: A command-line fuzzy finder
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " altercation/vim-colors-solarized
@@ -76,27 +75,13 @@ let g:airline#extensions#tabline#enabled = 1
 "" configure the formatting of filenames
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" kien/ctrlp.vim
-"" Recent file
-map <Leader>e :CtrlPBuffer<Enter>
-"" The maximum number of files to scan
-let g:ctrlp_max_files = 0
-"" workspace dir
-let g:ctrlp_working_path_mode = 'rw'
-"" caching by not deleting the cache files
-let g:ctrlp_clear_cache_on_exit = 0
-"" open file vertical and horizontal
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("h")': ['<c-i>'],
-    \ 'AcceptSelection("v")': ['<c-s>'],
-    \ }
-
-" mileszs/ack.vim
-map <Leader>f :Ack!<Space>
-map <Leader>fo :Ack! --objc <cword>
-map <Leader>fs :Ack! --swift <cword>
-map <Leader>fp :Ack! --python <cword>
-map <Leader>fj :Ack! --java <cword>
+" junegunn/fzf.vim
+map <Leader>f :Files<Enter>
+map <Leader>fg :GFiles<Enter>
+map <Leader>fb :Buffers<Enter>
+map <Leader>fh :History<Enter>
+map <Leader>fa :Ag<Enter>
+map <Leader>ft :Tags<Enter>
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -119,6 +104,9 @@ nmap <Leader><F12> :TagbarOpenAutoClose<Enter>
 
 " xolox/vim-easytags
 nmap <Leader>r :UpdateTags<Enter>
+
+" junegunn/fzf
+set rtp+=/usr/local/opt/fzf
 
 " Vim
 "" Alt + * move line
