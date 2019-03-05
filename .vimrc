@@ -42,6 +42,8 @@ Plug 'mattn/emmet-vim'
 Plug 'terryma/vim-expand-region'
 " Vim plugin that displays tags in a window, ordered by scope.
 Plug 'majutsushi/tagbar'
+" Automated tag file generation and syntax highlighting of tags in Vim
+Plug 'xolox/vim-easytags'
 call plug#end()
 
 " altercation/vim-colors-solarized
@@ -116,6 +118,9 @@ nmap <silent> <Leader>oJ :FSSplitBelow<cr>
 
 " majutsushi/tagbar
 nmap <Leader><F12> :TagbarOpenAutoClose<Enter>
+
+" xolox/vim-easytags
+nmap <Leader>r :UpdateTags<Enter>
 
 " Vim
 "" Alt + * move line
