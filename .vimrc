@@ -41,6 +41,10 @@ Plug 'majutsushi/tagbar'
 " :cherry_blossom: A command-line fuzzy finder
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+" Typescript syntax files for Vim
+Plug 'leafgarland/typescript-vim'
+" Yet Another TypeScript Syntax The most advanced TypeScript Syntax Highlighting in Vim
+Plug 'HerringtonDarkholme/yats.vim'
 call plug#end()
 
 " altercation/vim-colors-solarized
@@ -107,6 +111,9 @@ nmap <Leader>r :UpdateTags<Enter>
 
 " junegunn/fzf
 set rtp+=/usr/local/opt/fzf
+
+" leafgarland/typescript-vim
+let g:typescript_indent_disable = 1
 
 " Vim
 "" Alt + * move line
