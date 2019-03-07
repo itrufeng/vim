@@ -91,6 +91,8 @@ map <Leader>fb :Buffers<Enter>
 map <Leader>fh :History<Enter>
 map <Leader>fa :Ag<Enter>
 map <Leader>ft :Tags<Enter>
+map <Leader>fs :Snippets<Enter>
+inoremap <Leader>fs <Esc>:Snippets<Enter>
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
