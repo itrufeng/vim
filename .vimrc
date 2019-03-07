@@ -50,6 +50,8 @@ Plug 'posva/vim-vue'
 " A Vim plugin for Prettier
 "" https://prettier.io
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+" A code-completion engine for Vim
+Plug 'valloric/youcompleteme'
 call plug#end()
 
 " altercation/vim-colors-solarized
@@ -129,6 +131,13 @@ autocmd FileType vue syntax sync fromstart
 " prettier/vim-prettier
 " print semicolons
 let g:prettier#config#semi = 'false'
+
+" valloric/youcompleteme
+"" set completeme tirgger key to .
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
 
 " Vim
 "" Alt + * move line
