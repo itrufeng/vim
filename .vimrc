@@ -47,6 +47,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 " Syntax Highlight for Vue.js components
 Plug 'posva/vim-vue'
+" A Vim plugin for Prettier
+"" https://prettier.io
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
 
 " altercation/vim-colors-solarized
@@ -120,6 +123,10 @@ let g:typescript_indent_disable = 1
 " posva/vim-vue
 "" enable syntax when open file
 autocmd FileType vue syntax sync fromstart
+
+" prettier/vim-prettier
+" print semicolons
+let g:prettier#config#semi = 'false'
 
 " Vim
 "" Alt + * move line
