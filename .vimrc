@@ -45,6 +45,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 " Yet Another TypeScript Syntax The most advanced TypeScript Syntax Highlighting in Vim
 Plug 'HerringtonDarkholme/yats.vim'
+" Syntax Highlight for Vue.js components
+Plug 'posva/vim-vue'
 call plug#end()
 
 " altercation/vim-colors-solarized
@@ -114,6 +116,10 @@ set rtp+=/usr/local/opt/fzf
 
 " leafgarland/typescript-vim
 let g:typescript_indent_disable = 1
+
+" posva/vim-vue
+"" enable syntax when open file
+autocmd FileType vue syntax sync fromstart
 
 " Vim
 "" Alt + * move line
